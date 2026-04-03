@@ -162,12 +162,14 @@ body {
 }
 
 #about { 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 564px;
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 564px;
     align-items: center;
     gap: 100px;
     .left { 
+        max-width: 476px;
         display: grid;
         justify-items: start;
         align-content: start;
@@ -177,6 +179,7 @@ body {
  
 
     .green-card{ 
+        max-width: 550px;
         display: flex; 
         justify-content: center;
         position: relative; 
