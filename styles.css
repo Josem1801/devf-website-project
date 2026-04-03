@@ -5,6 +5,14 @@
 
     /* Fonts */
     --bricolage-grotesque: "Bricolage Grotesque", sans-serif;
+
+    --font-title: 70px; 
+    --font-subtitle: 52px; 
+    --font-logo: 50px;
+    --font-medium: 52px;
+    --font-base: 24px;
+    --font-small: 14px;
+    --font-card: 20px;
 }
 
 
@@ -19,6 +27,7 @@
 body { 
     background: var(--background);
     font-family: var(--bricolage-grotesque);
+    color: var(--dark-green);
 
     > * { 
         max-width: 1200px;
@@ -41,8 +50,8 @@ header {
     }
 
     a { 
-        color: var(--dark-green);
         text-decoration: none;
+        color: var(--dark-green);
     }
 
     nav { 
@@ -65,3 +74,105 @@ header {
 }
 
 
+
+#hero { 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 15px;
+    width: 100%; 
+    height: 688px;
+    background-color: var(--badge);
+    border-radius: 70px;
+    text-align: center;
+
+    h2 { 
+        font-weight: bold;
+        font-size: var(--font-title);
+    }
+    p  {
+        font-size: var(--font-base);
+    }
+    .btn { 
+        margin-top: 20px;
+    }
+
+    .image-left { 
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .image-right { 
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+#about { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 564px;
+    align-items: center;
+    gap: 100px;
+    .left { 
+        display: grid;
+        justify-items: start;
+        align-content: start;
+        gap: 37px;
+        p,header { 
+            margin: 0px; 
+            padding: 0px; 
+        }
+    }
+ 
+
+    .green-card{ 
+        display: flex; 
+        justify-content: center;
+        position: relative; 
+        background: var(--dark-green);
+        width: 550px;
+        aspect-ratio: 1/1;
+        border-radius: 70px;
+
+        img { 
+            position: absolute; 
+            bottom: 0; 
+        }
+    }
+}
+
+.header { 
+    font-weight: 500; 
+    font-size: var(--font-small);
+    text-transform: capitalize;
+}
+
+.subtitle { 
+    font-weight: 700; 
+    font-size: var(--font-subtitle);
+
+}
+
+main { 
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 0 auto; 
+}
+
+.btn { 
+    height: 54px;
+    width: auto; 
+    padding: 0 39px;
+    appearance: none; 
+    background: var(--dark-green);
+    border: none; 
+    color: white; 
+    border-radius: 999px; 
+    font-size: var(--font-card);
+}
