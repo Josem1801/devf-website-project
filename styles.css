@@ -2,6 +2,7 @@
     --dark-green: #00373E; 
     --background: #F7F6F4;
     --badge: #F9E6D0; 
+    --gray: #B8B8B8;
 
     /* Fonts */
     --bricolage-grotesque: "Bricolage Grotesque", sans-serif;
@@ -16,6 +17,7 @@
     --font-text: 20px;
     --font-small: 14px;
     --font-card: 20px;
+    --font-link: 18px;
 }
 
 
@@ -56,6 +58,10 @@
     border: 2px solid var(--dark-green);
      color: var(--dark-green);
 }
+.btn-white { 
+    background: white; 
+     color: var(--dark-green);
+}
 
 .card { 
     header { 
@@ -68,10 +74,20 @@
     }  
 }
 
+
 * { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;
+}
+
+a { 
+    text-decoration: none;
+    color: var(--dark-green);
+}
+
+ul { 
+    list-style: none;
 }
 
 body { 
@@ -82,6 +98,8 @@ body {
     > * { 
         max-width: 1240px;
         padding: 0 50px;
+        margin: 0 auto; 
+
     }
 }
 
@@ -99,10 +117,7 @@ body {
         }
     }
 
-    a { 
-        text-decoration: none;
-        color: var(--dark-green);
-    }
+   
 
     nav { 
         width: 100%;
@@ -114,10 +129,10 @@ body {
             
             gap: 69px;
             align-items: center;
-            list-style: none;
+            
             
             a { 
-                font-size: 18px;
+                font-size: var(--font-link);
             }
         }
     }
@@ -272,6 +287,70 @@ main {
     display: flex;
     flex-direction: column;
     gap: 100px;
-    margin: 0 auto; 
 }
 
+
+footer { 
+    display: grid; 
+    justify-items: center;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 50px; 
+    margin-top: 120px;
+    
+    > div { 
+        max-width: 570px;
+        height: 460px;
+        width: 100%;
+        border-radius: 70px; 
+    }
+
+    > :nth-child(1) { 
+        padding: 40px 60px 64px 60px;
+        background: white;
+        display: grid; 
+        gap: 40px; 
+        > a { 
+            font-size: var(--font-card-title);
+            font-weight: 700;
+
+        }
+        nav { 
+            ul { 
+                display: grid; 
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                gap: 20px;
+
+            }
+             a { 
+                font-size: var(--font-link);
+            }
+        }
+        p { 
+            color: var(--gray);
+        }
+    }
+    > :nth-child(2) { 
+        display: grid;
+        gap: 50px;
+        background: var(--dark-green);
+        padding: 70px;
+        padding-top: 75px;
+
+        position: relative; 
+        overflow: hidden;
+        p { 
+            color: white;
+            font-size: var(--font-card-title);
+            font-weight: 700;
+            z-index: 1;
+        }
+        img { 
+            position: absolute; 
+            top: 36px; 
+            right: 0;
+        }
+        
+    }
+}
