@@ -1,0 +1,67 @@
+:root{ 
+    --dark-green: #00373E; 
+    --background: #F7F6F4;
+    --badge: #F9E6D0; 
+
+    /* Fonts */
+    --bricolage-grotesque: "Bricolage Grotesque", sans-serif;
+}
+
+
+
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body { 
+    background: var(--background);
+    font-family: var(--bricolage-grotesque);
+
+    > * { 
+        max-width: 1200px;
+        padding: 0 50px;
+    }
+}
+
+header { 
+    display: flex; 
+    align-items: center;
+    margin: 75px auto; 
+
+    h1 { 
+        flex: 1; 
+        text-align: center;
+
+        a { 
+            font-size: 50px;
+        }
+    }
+
+    a { 
+        color: var(--dark-green);
+        text-decoration: none;
+    }
+
+    nav { 
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        ul { 
+            display: flex; 
+            
+            gap: 69px;
+            align-items: center;
+            list-style: none;
+            
+            a { 
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
