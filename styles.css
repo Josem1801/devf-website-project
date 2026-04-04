@@ -116,6 +116,10 @@ ul {
     list-style: none;
 }
 
+html { 
+    scroll-behavior: smooth;
+}
+
 body { 
     background: var(--background);
     font-family: var(--bricolage-grotesque);
