@@ -23,14 +23,14 @@
 
 @media (max-width: 900px) { 
     :root { 
-        --font-title: 40px; 
-        --font-subtitle: 38px; 
+        --font-title: 32px; 
+        --font-subtitle: 26px; 
         --font-logo: 30px;
-        --font-medium: 30px;
-        --font-base: 18px;
-        --font-description: 16px;
-        --font-card-title: 30px;
-        --font-text: 18px;
+        --font-medium: 28px;
+        --font-base: 14px;
+        --font-description: 14px;
+        --font-card-title: 25px;
+        --font-text: 14px;
         --font-small: 12px;
         --font-card: 16px;
         --font-link: 14px;
@@ -131,6 +131,12 @@ body {
         margin: 0 auto; 
 
     }
+
+    @media (max-width: 900px) { 
+        > * { 
+            padding: 0 12px;
+        }
+    }
 }
 
 main { 
@@ -180,7 +186,9 @@ main {
         margin: 50px auto; 
 
         nav { 
+            
             ul { 
+                display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -203,6 +211,7 @@ main {
     justify-content: center; 
     align-items: center;
     gap: 15px;
+    padding: 20px;
     width: 100%; 
     max-height: 688px;
     height: 65dvh;
@@ -234,12 +243,12 @@ main {
     }
 
     @media (max-width: 900px) { 
-         .image-left { 
-        width: 150px;
-    }
-    .image-right { 
-        width: 150px;
-    }
+        .image-left { 
+            width: 120px;
+        }
+        .image-right { 
+            width: 120px;
+        }
 
     }
 }
@@ -275,6 +284,7 @@ main {
         img { 
             position: absolute; 
             bottom: 0; 
+            width: 75%;
         }
     }
 }
@@ -309,7 +319,7 @@ main {
             display: grid; 
             justify-items: start;
             align-items: start;
-
+            height: fit-content;
             
         }
 
@@ -349,10 +359,9 @@ main {
     }
       @media (max-width: 900px) { 
         .service-container { 
-            grid-template-columns: minmax(400px, 600px); 
-            grid-template-rows: 455px 455px 520px;
+            grid-template-columns: minmax(200px, 600px); 
+            grid-template-rows: auto auto auto;
             justify-content: center;
-            
             > :nth-child(3) { 
                 grid-column: 1/ 2;
             }
@@ -421,7 +430,7 @@ main {
             height: 100%;
 
             header { 
-                font-size: 30px;
+                font-size: var(--font-card-title);
                 font-weight: 600;
                 margin-bottom: 27px;
             }
@@ -435,6 +444,7 @@ main {
         
         .contact-container { 
             width: 100%;
+            padding: 30px;
             grid-template-columns: 1fr; 
             justify-items: center;
             text-align: center;
@@ -452,7 +462,7 @@ footer {
     display: grid; 
     justify-items: center;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 50px; 
     margin-top: 120px;
     margin-bottom: 40px;
@@ -512,5 +522,18 @@ footer {
         }
         
     }
+
+   @media (max-width: 900px) { 
+         > :nth-child(1) { 
+            padding: 40px;
+         }
+          > :nth-child(2) { 
+            padding: 70px 40px;
+            height: fit-content;
+            img { 
+                width: 200px;
+            }
+         }
+    } 
 }
 
