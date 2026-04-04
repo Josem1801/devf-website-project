@@ -17,7 +17,7 @@ Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/Josem1801/devf-website-project.git
    ```
 
 2. **Navega al directorio del proyecto:**
