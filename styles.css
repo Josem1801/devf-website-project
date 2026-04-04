@@ -2,6 +2,7 @@
     --dark-green: #00373E; 
     --background: #F7F6F4;
     --badge: #F9E6D0; 
+    --badge-light: #FDF7F1;
     --gray: #B8B8B8;
 
     /* Fonts */
@@ -88,6 +89,13 @@
         font-size: var(--font-text);
         background: transparent; 
     }  
+}
+
+.section-top { 
+    display: flex; 
+    flex-direction: column; 
+        align-items: center;
+        gap: 20px;
 }
 
 
@@ -276,12 +284,7 @@ main {
     gap: 80px;
     width: 100%;
 
-    .top { 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center;
-        gap: 20px;
-    }
+    
     
    
 
@@ -358,6 +361,86 @@ main {
 }
 
 
+
+#contact { 
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 80px;
+
+    .contact-container { 
+        text-align: left;
+        background: white; 
+        min-height: 600px;
+        border-radius: 70px; 
+        padding: 70px; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px; 
+        font-size: var(--font-text);
+
+        form { 
+            display: grid;
+            background: var(--badge-light);
+            border-radius: 70px;
+            padding: 45px 50px 60px 50px; 
+            gap: 25px;
+            label { 
+                display: grid; 
+                gap: 10px;
+
+                input, textarea { 
+                    outline: none;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid var(--dark-green);
+                    padding: 0px; 
+                    height: 40px;
+                    font-size: var(--font-text);
+                    font-family: var(--bricolage-grotesque);
+                }
+                
+            }
+            .btn { 
+                    margin-top: 20px;
+                }
+        }
+
+        section { 
+            text-align: left;
+            width: 100%;
+            font-size: var(--font-text);
+            display: flex; 
+            flex-direction: column;
+            gap: 15px;
+            height: 100%;
+
+            header { 
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 27px;
+            }
+            span { 
+                margin-top: auto;
+            }
+        }
+    }
+
+    @media (max-width: 900px) { 
+        
+        .contact-container { 
+            width: 100%;
+            grid-template-columns: 1fr; 
+            justify-items: center;
+            text-align: center;
+
+            form { 
+                width: 100%;
+            }
+        }
+    }
+}
 
 
 
